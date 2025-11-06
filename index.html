@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viru - Chasing the fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark:bg-primary bg-secondary">
+    <nav
+      class="border-gray-200 dark:bg-primary bg-secondary shadow-md sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="#"
+          class="inline-flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="./assets/img/Logo_Viru_Light.png"
+            class="h-8 hidden logo-dark"
+            alt="Viru Logo (dark)"
+          />
+          <img
+            src="./assets/img/Logo_Viru.png"
+            class="h-8 block logo-light"
+            alt="Viru Logo (light)"
+          />
+        </a>
+
+        <button
+          data-collapse-toggle="navbar-solid-bg"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-solid-bg"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+          <ul
+            class="flex items-center flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="font-heading text-font block py-2 px-3 md:p-0 text-accent dark:text-secondary rounded-sm mb-5 md:mb-0"
+                aria-current="page"
+                >IDENTITY</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-heading text-font block py-2 px-3 md:p-0 text-accent dark:text-secondary rounded-sm mb-5 md:mb-0"
+                aria-current="page"
+                >BRAND GUIDELINES</a
+              >
+            </li>
+            <li>
+              <!-- Toggle Dark/Light -->
+              <div class="container-toggle">
+                <label
+                  for="switch"
+                  class="toggle inline-flex items-center gap-2 cursor-pointer select-none rounded-full px-1 py-1 bg-gray-200 dark:bg-gray-700 shadow-sm transition-colors"
+                >
+                  <input
+                    id="switch"
+                    class="input sr-only"
+                    type="checkbox"
+                    aria-label="Attiva/disattiva dark mode"
+                  />
+
+                  <span class="icon icon--moon hidden dark:inline-block">
+                    <svg
+                      height="20"
+                      width="20"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="moon-gradient"
+                          x1="50%"
+                          y1="0%"
+                          x2="50%"
+                          y2="100%"
+                        >
+                          <stop offset="0%" stop-color="#4155e2">
+                            <animate
+                              attributeName="stop-color"
+                              values="#4155e2; #202a44; #4155e2"
+                              dur="4s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                          <stop offset="100%" stop-color="#202a44">
+                            <animate
+                              attributeName="stop-color"
+                              values="#202a44; #4155e2; #202a44"
+                              dur="4s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                        </linearGradient>
+                      </defs>
+                      <path
+                        fill="url('#moon-gradient')"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span class="icon icon--sun inline-block">
+                    <svg
+                      height="25"
+                      width="25"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="sun-gradient"
+                          x1="50%"
+                          y1="0%"
+                          x2="50%"
+                          y2="100%"
+                        >
+                          <stop offset="0%" stop-color="#f32487">
+                            <animate
+                              attributeName="stop-color"
+                              values="#f32487; #202a44; #f32487"
+                              dur="7s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                          <stop offset="100%" stop-color="#202a44">
+                            <animate
+                              attributeName="stop-color"
+                              values="#202a44; #f32487; #202a44"
+                              dur="7s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                        </linearGradient>
+                      </defs>
+                      <path
+                        fill="url('#sun-gradient')"
+                        d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <main>
+      <video controls autoplay muted loop>
+        <source src="./assets/video/Discover.mp4" />
+      </video>
+      <div class="px-5">
+        <h1
+          class="font-heading text-3xl text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          INTRODUCING VIRU
+        </h1>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          La brand identity di VIRU è stata progettata per riflettere la natura
+          dinamica e coinvolgente della piattaforma. Il logo, con il suo design
+          moderno e accattivante, rappresenta l'energia e la passione che VIRU
+          porta nel mondo dell'intrattenimento territoriale. I colori vivaci e
+          le forme del logo simboleggiano la creatività e l'innovazione,
+          elementi chiave che definiscono l'esperienza utente su VIRU.
+          <br /><br />
+          La tipografia scelta è audace e leggibile, garantendo che il marchio
+          sia facilmente riconoscibile in ogni contesto. Nel complesso, la brand
+          identity di VIRU comunica un senso di avventura e scoperta, invitando
+          gli utenti a esplorare nuovi orizzonti di divertimento online.
+        </p>
+        <img src="./assets/img/Billboard-PSD-Mockup.jpg" alt="billboard Viru" loading="lazy"/>
+        <h4
+          class="font-heading text-2xl text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          LA SFIDA
+        </h4>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Con VIRU, abbiamo dato forma a un’idea semplice ma potente: vedere.
+          Dal siciliano “viru”, “vedo”, il progetto nasce con l’ambizione di
+          accorciare le distanze tra le persone e ciò che accade attorno a loro
+          — eventi, escursioni, iniziative culturali e sociali che animano i
+          territori e li rendono vivi. <br /><br />
+          La sfida era chiara: trasformare un concetto radicato nella
+          quotidianità in un’identità capace di ispirare curiosità, appartenenza
+          e scoperta. Serviva un brand che parlasse la lingua delle comunità
+          locali, ma con un’estetica contemporanea e un’esperienza digitale
+          fluida e intuitiva. <br /><br />
+          È stato definito ogni aspetto del marchio — dal naming alla strategia
+          visiva, dal tono di voce all’interazione — per costruire un ecosistema
+          coerente, riconoscibile e in costante evoluzione. Un sistema che non
+          si limita a mostrare, ma invita a
+          <span class="italic">vedere davvero</span>: luoghi, persone, e
+          connessioni che meritano di essere vissute.
+        </p>
+        <video controls autoplay muted loop>
+          <source src="./assets/video/Travel.mp4" />
+        </video>
+        <h4
+          class="font-heading text-2xl text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          STRATEGIA
+        </h4>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Al centro della nuova identità di VIRU c’è una visione chiara: vedere
+          è connettersi. Abbiamo tradotto questo principio in un linguaggio
+          visivo dal carattere deciso, capace di fondere curiosità, movimento ed
+          emozione. <br /><br />
+          Il logo, dal design essenziale ma fortemente espressivo, trova la sua
+          forza nel puntino della “i”, trasformato in due occhi che osservano,
+          esplorano e reagiscono. Un dettaglio ispirato al mondo dell’animazione
+          retrò — quello dei primi corti di Topolino e dei personaggi che
+          sgranavano gli occhi davanti alla meraviglia — reinterpretato in
+          chiave contemporanea per trasmettere autenticità e vitalità.<br /><br />
+        </p>
+        <div class="flex items-start justify-between gap-2 mb-5">
+          <div
+            class="tenor-gif-embed"
+            data-postid="17531514"
+            data-share-method="host"
+            data-aspect-ratio="1.76796"
+            data-width="80%"
+          >
+            <a
+              href="https://tenor.com/view/sexy-bulging-eyes-eyes-popped-excited-gif-17531514"
+              >Sexy Bulging Eyes GIF</a
+            >from <a href="https://tenor.com/search/sexy-gifs">Sexy GIFs</a>
+          </div>
+          <div
+            class="tenor-gif-embed h-[120px]"
+            data-postid="26198499"
+            data-share-method="host"
+            data-aspect-ratio="1.26482"
+            data-width="50%"
+          >
+            <a
+              href="https://tenor.com/view/minnie-mouse-and-mickey-mouse-gif-26198499"
+              >Minnie Mouse And Mickey Mouse GIF</a
+            >from
+            <a
+              href="https://tenor.com/search/minnie+mouse+and+mickey+mouse-gifs"
+              >Minnie Mouse And Mickey Mouse GIFs</a
+            >
+          </div>
+        </div>
+        <img src="./assets/img/Logo_GIF.gif" alt="Logo Viru" loading="lazy"/>
+        <h4
+          class="font-heading text-2xl text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          BRAND
+        </h4>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          È stato costruito un sistema visivo che pulsa di energia: forme
+          fluide, colori luminosi e un tono di voce diretto che trasmette
+          curiosità e vicinanza. L’obiettivo era creare un linguaggio visivo che
+          evolvesse con il brand, capace di adattarsi a contesti diversi, dal
+          digitale agli eventi fisici, mantenendo sempre riconoscibilità e
+          coerenza. <br /><br />
+          Nel futuro, il pittogramma degli occhi diventerà il protagonista di
+          un’evoluzione dinamica: sarà animato, reagendo a suoni, movimenti o
+          interazioni, per dare al logo una presenza ancora più espressiva e
+          giocosa. Un gesto semplice ma potente, che continuerà a rafforzare la
+          missione di VIRU: invitare le persone a guardare con meraviglia ciò
+          che accade attorno a loro.<br /><br />
+        </p>
+        <h4
+          class="font-heading text-lg text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          PAYOFF: CHASING THE FUN
+        </h4>
+        <div class="flex justify-center">
+          <img src="./assets/img/Brand_Payoff.jpg" alt="brand payoff Viru" loading="lazy"/>
+        </div>
+        <h4
+          class="font-heading text-lg text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          USE CASES
+        </h4>
+        <div class="flex justify-center mt-5 mb-2">
+          <img
+            class="w-full"
+            src="./assets/img/Sport_Bottle.jpg"
+            alt="Sport Bottle Mockup"
+            loading="lazy"
+          />
+        </div>
+        <div class="img-container flex gap-2 justify-between mb-2">
+          <img
+            class="w-[50%]"
+            src="./assets/img/iPhone-Pro-Showcase.jpg"
+            alt="iPhone Pro Showcase"
+            loading="lazy"
+          />
+          <img
+            class="w-[48%]"
+            src="./assets/img/Sport_Bottle_Mockup.jpg"
+            alt="Sport Bottle Mockup"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex justify-center mb-2">
+          <img
+            class="w-full"
+            src="./assets/img/ios-app-icon.jpg"
+            alt="ios app icon Viru"
+            loading="lazy"
+          />
+        </div>
+        <div class="img-container flex gap-2 justify-between mb-2">
+          <img
+            class="w-[50%]"
+            src="./assets/img/Lightbox-on-the-Street-Mockup.jpg"
+            alt="Lightbox on the Street Mockup"
+            loading="lazy"
+          />
+          <img
+            class="w-[48%]"
+            src="./assets/img/Tote_Bag.jpg"
+            alt="Tote Bag Mockup"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex justify-center mb-2">
+          <img
+            class="w-full"
+            src="./assets/img/Van_Mockup_1.jpg"
+            alt="Van Mockup"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex justify-center mb-2">
+          <img
+            class="w-full"
+            src="./assets/img/Backside-T-Shirt-Mockup.jpg"
+            alt="Backside T-Shirt"
+          />
+        </div>
+        <h4
+          class="font-heading text-2xl text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          DIGITAL
+        </h4>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          È stato sviluppato un design system completo, pensato per trasmettere
+          la personalità di VIRU in ogni interfaccia. Linee morbide, movimenti
+          fluidi e dettagli visivi ispirati alla curiosità dello sguardo
+          conferiscono al brand un tocco umano e giocoso, garantendo coerenza e
+          riconoscibilità in ogni esperienza digitale.<br /><br />
+          All’interno del sistema, è presente un set di icone originali,
+          coerente con il tratto del logo e con la sua energia visiva. Ogni
+          icona è pensata per essere semplice ma espressiva, immediatamente
+          leggibile e capace di adattarsi ai diversi contesti d’uso — dal sito
+          web alle app, fino alla comunicazione social.<br /><br />
+          Il risultato è un ecosistema digitale armonico e flessibile, dove ogni
+          elemento visivo contribuisce a rendere VIRU più accessibile, più
+          coinvolgente e più vivo.
+        </p>
+
+        <div id="gallery" class="relative w-full" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="./assets/img/Icon_arrow.jpg"
+                class="absolute block max-w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="hidden duration-700 ease-in-out"
+              data-carousel-item="active"
+            >
+              <img
+                src="./assets/img/Icon_maps_travel.jpg"
+                class="absolute block max-w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="./assets/img/Icon_People.jpg"
+                class="absolute block max-w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="./assets/img/Icon_wheather-nature.jpg"
+                class="absolute block max-w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            >
+              <svg
+                class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            >
+              <svg
+                class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+        <video controls autoplay muted loop class="mt-10">
+        <source src="./assets/video/Event.mp4" />
+      </video>
+      <div class="flex justify-center mt-10 mb-2">
+            <img
+                class="w-[50%]"
+                src="./assets/img/Logo_Pittogramma.png"
+                alt="Logo Pittogramma Viru"
+                loading="lazy"
+            />
+      </div>
+      <h2
+          class="font-heading text-3xl text-font mt-10 mb-5 text-accent text-center"
+        >
+          CHASING THE FUN
+        </h2>
+      </div>
+    </main>
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>
