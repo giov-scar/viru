@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Viru - Chasing the fun" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="./assets/img/Logo_Pittogramma.png" />
+    <meta property="og:url" content="./assets/img/Logo_Pittogramma.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:description"
+      content="Viru is a dynamic platform designed to bring local entertainment and events closer to you. Explore, connect, and experience the fun around you with Viru."
+    />
+    <meta property="og:site_name" content="Viru" />
+    <meta name="twitter:image:alt" content="Viru Logo" />
+    <title>Viru - Chasing the fun</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark:bg-primary bg-secondary">
+    <nav
+      class="border-gray-200 dark:bg-primary bg-secondary shadow-md sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="index.html"
+          class="inline-flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="./assets/img/Logo_Viru_Light.png"
+            class="h-8 hidden logo-dark"
+            alt="Viru Logo (dark)"
+          />
+          <img
+            src="./assets/img/Logo_Viru.png"
+            class="h-8 block logo-light"
+            alt="Viru Logo (light)"
+          />
+        </a>
+
+        <button
+          data-collapse-toggle="navbar-solid-bg"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-solid-bg"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+          <ul
+            class="flex items-center flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="font-heading text-font block py-2 px-5 text-accent dark:text-secondary mb-5 md:mb-0 border-accent dark:border-secondary hover:rounded-full hover:bg-accent hover:text-secondary dark:hover:bg-secondary dark:hover:text-primary transition-colors"
+                aria-current="page"
+                >IDENTITY</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-heading text-font block py-2 px-3 text-accent dark:text-secondary mb-5 md:mb-0 border-2 rounded-full hover:bg-accent hover:rounded-full hover:text-secondary dark:hover:bg-secondary dark:hover:text-primary transition-colors"
+                aria-current="page"
+                >BRAND GUIDELINES</a
+              >
+            </li>
+            <li>
+              <!-- Toggle Dark/Light -->
+              <div class="container-toggle">
+                <label
+                  for="switch"
+                  class="toggle inline-flex items-center gap-2 cursor-pointer select-none rounded-full px-1 py-1 bg-gray-200 dark:bg-gray-700 shadow-sm transition-colors"
+                >
+                  <input
+                    id="switch"
+                    class="input sr-only"
+                    type="checkbox"
+                    aria-label="Attiva/disattiva dark mode"
+                  />
+
+                  <span class="icon icon--moon hidden dark:inline-block">
+                    <svg
+                      height="20"
+                      width="20"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="moon-gradient"
+                          x1="50%"
+                          y1="0%"
+                          x2="50%"
+                          y2="100%"
+                        >
+                          <stop offset="0%" stop-color="#4155e2">
+                            <animate
+                              attributeName="stop-color"
+                              values="#4155e2; #202a44; #4155e2"
+                              dur="4s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                          <stop offset="100%" stop-color="#202a44">
+                            <animate
+                              attributeName="stop-color"
+                              values="#202a44; #4155e2; #202a44"
+                              dur="4s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                        </linearGradient>
+                      </defs>
+                      <path
+                        fill="#003049"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span class="icon icon--sun inline-block">
+                    <svg
+                      height="25"
+                      width="25"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="sun-gradient"
+                          x1="50%"
+                          y1="0%"
+                          x2="50%"
+                          y2="100%"
+                        >
+                          <stop offset="0%" stop-color="#f32487">
+                            <animate
+                              attributeName="stop-color"
+                              values="#f32487; #202a44; #f32487"
+                              dur="7s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                          <stop offset="100%" stop-color="#202a44">
+                            <animate
+                              attributeName="stop-color"
+                              values="#202a44; #f32487; #202a44"
+                              dur="7s"
+                              repeatCount="indefinite"
+                            ></animate>
+                          </stop>
+                        </linearGradient>
+                      </defs>
+                      <path
+                        fill="#e83541"
+                        d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <main>
+      <img
+        src="./assets/img/Sketch.jpg"
+        alt="Logo Sketch"
+        class="w-full h-auto object-cover"
+      />
+      <div class="px-5">
+        <h1
+          class="font-heading text-3xl text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          BRAND GUIDELINES
+        </h1>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Il logo è composto da un pittogramma e da un logotipo. Come mostrato
+          accanto, questi due elementi devono essere sempre riprodotti insieme,
+          eccezion fatta per le immagini dei profili social dove può figurare
+          anche solo il pittogramma. Il logo non può essere ridisegnato,
+          alterato o manipolato digitalmente.
+          <br /><br />
+          Il logo è disponibile in svg, jpeg e png. Si invita ad assicurarsi
+          prima di utilizzarlo, quale sia il formato è più adatto alla
+          destinazione d'uso.
+        </p>
+        <h6
+          class="font-heading text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          FORMATI
+        </h6>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          svg: adatto per usi professionali <br />
+          jpeg, png: pubblicazione desktop
+        </p>
+        <h6
+          class="font-heading text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          VARIANTI
+        </h6>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Il logo viene mostrato solamente nelle tre varianti mostrate in questa
+          pagina o monocromatico bianco o nero. Per un maggiore approfondimento
+          consultare la
+          <a href="#colors" class="underline">sezione dedicata ai colori</a>. Si
+          prega di evitare altre combinazioni di colori.
+        </p>
+        <img src="./assets/img/Logo_GIF.gif" alt="Logo Viru" loading="lazy" />
+        <h6
+          class="font-heading text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          ACCESSIBILITÀ
+        </h6>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Il logo deve sempre avere un ottimo contrasto con lo sfondo per
+          garantire il massimo impatto e accessibilità. È previsto un margine di
+          rispetto intorno al logo obbligatorio.
+        </p>
+        <img src="./assets/img/Logo_Viru.png" alt="Logo Viru" loading="lazy" />
+        <h6
+          class="font-heading text-font mt-10 mb-5 text-primary dark:text-secondary"
+        >
+          MARGINE DI RISPETTO
+        </h6>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Nell'ordine di massimizzare la sua presenza visuale il logo richiede
+          un'area circostante priva di ogni altro elemento grafico o testuale.
+          <br />
+          Questa quantità di spazio deve essere sempre circoscritta attorno al
+          logo. È importante che questa regola venga osservata e la zona di
+          esclusione sia mantenuta tutte le volte che il logo venga utilizzato.
+          La distanza minima consigliata è di protezione per il logo. Il logo
+          apparirà su diversi formati e applicazioni e questo aiuterà a dare
+          chiarezza e presenza al marchio.
+        </p>
+        <h2
+          id="colors"
+          class="font-heading text-xl text-font mt-10 mb-5 text-primary dark:text-secondary underline"
+        >
+          COLORI
+        </h2>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          I principali colori del marchio sono mostrati di seguito, questi
+          colori dovrebbero essere usati in tutte le comunicazioni che
+          riguardano il marchio.
+        </p>
+        <div class="flex justify-between mb-10">
+          <div class="bg-accent w-[70px] h-[70px] rounded-full relative">
+            <p>
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-secondary dark:text-primary font-bold"
+                >CORAL</span
+              >
+            </p>
+          </div>
+          <div
+            class="bg-secondary w-[70px] h-[70px] rounded-full border-2 border-white dark:border-0 relative"
+          >
+            <p>
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary dark:text-primary font-bold"
+                >SAND</span
+              >
+            </p>
+          </div>
+          <div
+            class="bg-primary w-[70px] h-[70px] rounded-full dark:border-2 dark:border-white relative"
+          >
+            <p>
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-secondary dark:text-secondary font-bold"
+                >OCEAN</span
+              >
+            </p>
+          </div>
+          <div class="bg-tertiary w-[70px] h-[70px] rounded-full relative">
+            <p>
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-secondary dark:text-primary font-bold"
+                >SKY</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="relative overflow-x-auto shadow-md rounded-lg mb-10">
+          <table
+            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+          >
+            <thead class="text-xsuppercase bg-tertiary text-secondary">
+              <tr>
+                <th scope="col" class="px-6 py-3">Color</th>
+                <th scope="col" class="px-6 py-3">HEX</th>
+                <th scope="col" class="px-6 py-3">RGB</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-primary text-secondary border-b dark:border-tertiary border-tertiary"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-secondary whitespace-nowrap dark:text-white"
+                >
+                  CORAL
+                </th>
+                <td class="px-6 py-4 uppercase">#e83541</td>
+                <td class="px-6 py-4">232,53,65</td>
+              </tr>
+              <tr class="bg-tertiary text-secondary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-secondary whitespace-nowrap dark:text-white"
+                >
+                  SAND
+                </th>
+                <td class="px-6 py-4 uppercase">#fdf0d5</td>
+                <td class="px-6 py-4">253,240,213</td>
+              </tr>
+              <tr
+                class="bg-primary text-secondary border-b dark:border-tertiary border-tertiary"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-secondary whitespace-nowrap dark:text-white"
+                >
+                  OCEAN
+                </th>
+                <td class="px-6 py-4 uppercase">#003049</td>
+                <td class="px-6 py-4">0,48,73</td>
+              </tr>
+              <tr class="bg-tertiary text-secondary">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-secondary whitespace-nowrap dark:text-white"
+                >
+                  SKY
+                </th>
+                <td class="px-6 py-4 uppercase">#669bbc</td>
+                <td class="px-6 py-4">102,155,188</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2
+          id="colors"
+          class="font-heading text-xl text-font mt-10 mb-5 text-primary dark:text-secondary underline"
+        >
+          TIPOGRAFIA
+        </h2>
+        <p
+          class="font-primary text-font text-lg mb-10 text-primary dark:text-secondary"
+        >
+          Boldonse è stato selezionato come carattere tipografico principale del
+          marchio, ed è utilizzato per materiale promozionale prodotto
+          internamente. Si prega di evitare l'utilizzo di questo font per il
+          testo in blocchi. L'uso di questo carattere è riservato alla sola
+          riproduzione del logotipo e per i titoli.
+          <br /><br />
+          Per i blocchi di testo si richiede l'uso del font Instrument Serif e
+          Instrument Italic per materiali destinati sia alla riproduzione
+          digitale che stampata.
+          <br /><br />
+          Il testo può essere variato dal bordo sinistro del logotipo. Si prega
+          di evitare il giustificato in blocchi di titoli e testo. Si può
+          utilizzare il testo centrato in titoli per materiali destinati alla
+          diffusione del marchio come biglietti da visita, volantini e materiali
+          POP.
+          <br /><br />
+          Entrambi i font sono disponibili su Google Fonts e possono essere
+          scaricati liberamente <span><a class="font-bold underline" href="https://fonts.google.com/specimen/Boldonse" target="_blank">qui (Boldonse)</a></span> e <span><a class="font-bold underline" href="https://fonts.google.com/specimen/Instrument+Serif" target="_blank">qui (Instrument Serif)</a></span>.
+        </p>
+        <div class="flex justify-center mt-10 mb-2">
+          <img
+            class="w-[50%]"
+            src="./assets/img/Logo_Pittogramma.png"
+            alt="Logo Pittogramma Viru"
+            loading="lazy"
+          />
+        </div>
+        <h2
+          class="font-heading text-3xl text-font mt-10 mb-5 text-accent text-center"
+        >
+          CHASING THE FUN
+        </h2>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>
